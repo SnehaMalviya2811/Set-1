@@ -1,4 +1,7 @@
+#negative number in array
+
 #include <stdio.h>
+
 
 int main() {
     int n, count = 0;
@@ -27,4 +30,5 @@ int main() {
 
     return 0;
 }
+#
 
