@@ -1,12 +1,9 @@
-#negative number in array
+// negative number in array
 
 #include <stdio.h>
-
-
 int main() {
     int n, count = 0;
 
-    
     printf("Enter the number of elements in the array: ");
     scanf("%d", &n);
 
@@ -30,5 +27,7 @@ int main() {
 
     return 0;
 }
-#
+
+
+
 
