@@ -1,0 +1,39 @@
+/)Given an integer array nums and an integer k, return the kth largest element in the array
+#include <stdio.h>
+
+int main() {
+    int n, k, arr[100], i;
+
+    printf("Enter the size of the array: ");
+    scanf("%d", &n);
+
+    printf("Enter the elements of the array: ");
+    for (i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    printf("Enter the value of k: ");
+    scanf("%d", &k);
+
+    for (i = 0; i < n; i++) {
+        int max = arr[i];
+        int max_index = i;
+
+        for (int j = i + 1; j < n; j++) {
+            if (arr[j] > max) {
+                max = arr[j];
+                max_index = j;
+            }
+        }
+
+        if (i == k - 1) {
+            printf("Kth Largest Element: %d\n", max);
+            break;
+        }
+
+        arr[max_index] = arr[i];
+        arr[i] = max;
+    }
+
+    return 0;
+}
