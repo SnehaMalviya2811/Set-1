@@ -1,0 +1,25 @@
+/string is paildrome are not
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[100];
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+
+    int left = 0;
+    int right = strlen(str) - 2; 
+https://www.onlinegdb.com/#editor_1
+    while (left < right) {
+        if (str[left] != str[right]) {
+            printf("The string is not a palindrome.\n");
+            return 0;
+        }https://www.onlinegdb.com/#editor_1
+        left++;
+        right--;
+    }
+
+    printf("The string is a palindrome.\n");
+
+    return 0;
+}
